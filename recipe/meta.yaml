@@ -1,18 +1,18 @@
 {% set name = "bindensity" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bindensity-{{ version }}.tar.gz
-  sha256: 3399767f60f90e9d48c922aef3f895a2732f4125985d1aa8486a15d8e46a9f77
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bindensity-{{ version }}.tar.gz
+  sha256: f20ca6683522295edc146355a7fadc3427df7df6ad0f29ac8cbcca8e866d2604
 
 build:
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 4
+  number: 0
 
 requirements:
   build:
