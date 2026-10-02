@@ -1,5 +1,5 @@
 {% set name = "bindensity" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/bindensity-{{ version }}.tar.gz
-  sha256: f20ca6683522295edc146355a7fadc3427df7df6ad0f29ac8cbcca8e866d2604
+  sha256: 2cbf2f5852f2923dc55df002a12ecdc6085024759bcb55ee189b53aeacadd839
 
 build:
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
